@@ -2,14 +2,47 @@
 <html>
 <head>
     <title>秘密便條</title>
-    <style>body { text-align: center; font-family: sans-serif; padding-top: 50px; }</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { 
+            text-align: center; 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+            padding: 20px; 
+            background-color: #f4f4f9;
+        }
+        h1 { font-size: 24px; color: #333; }
+        
+        /* 讓輸入框和按鈕在手機上好按一點 */
+        textarea {
+            width: 90%;          /* 佔滿手機寬度的 90% */
+            max-width: 500px;    /* 但在電腦上不要超過 500px */
+            padding: 15px;       /* 增加內距，打字比較舒服 */
+            font-size: 16px;     /* 字體放大，手機才不用放大鏡看 */
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+        
+        button {
+            margin-top: 20px;
+            font-size: 18px;
+            padding: 12px 24px;  /* 按鈕變大，手指好點 */
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 90%;          /* 手機上按鈕也寬一點 */
+            max-width: 300px;
+        }
+        button:active { background-color: #0056b3; } /* 按下去的特效 */
+    </style>
 </head>
 <body>
     <h1>🤫 建立一則「閱後即焚」的秘密</h1>
     <form method="POST">
-        <textarea name="secret" rows="5" cols="40" placeholder="在此輸入你的秘密..."></textarea>
-        <br><br>
-        <button type="submit" style="font-size: 20px; padding: 10px 20px;">🔒 加密並產生連結</button>
+        <textarea name="secret" rows="6" placeholder="在此輸入你的秘密..."></textarea>
+        <br>
+        <button type="submit">🔒 加密並產生連結</button>
     </form>
 </body>
 </html>

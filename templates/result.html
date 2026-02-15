@@ -2,14 +2,49 @@
 <html>
 <head>
     <title>連結已建立</title>
-    <style>body { text-align: center; font-family: sans-serif; padding-top: 50px; }</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { 
+            text-align: center; 
+            font-family: sans-serif; 
+            padding: 20px; 
+            background-color: #e8f5e9; /* 淺綠色背景 */
+        }
+        input[type="text"] {
+            width: 90%;
+            max-width: 500px;
+            padding: 15px;
+            font-size: 16px;
+            border: 2px solid #4caf50;
+            border-radius: 8px;
+            background: white;
+            color: #333;
+        }
+        .warning {
+            color: #d32f2f;
+            font-weight: bold;
+            background: #ffebee;
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
-    <h1>✅ 秘密已上鎖！</h1>
-    <p>請複製下方連結傳給你的朋友 (注意：連結點開一次後就會失效)：</p>
+    <h1 style="color: #2e7d32;">✅ 秘密已上鎖！</h1>
+    <p>請複製下方連結傳給你的朋友：</p>
     
-    <input type="text" value="{{ link }}" style="width: 80%; padding: 10px; font-size: 16px;">
+    <input type="text" value="{{ link }}" readonly onclick="this.select()">
     
-    <p style="color: red; font-size: 12px;">⚠️ 警告：請勿自行點擊，否則秘密會在你眼前銷毀！</p>
+    <br>
+    <div class="warning">
+        ⚠️ 警告：請勿自行點擊！<br>連結點開一次後就會失效。
+    </div>
+    
+    <p style="color: #666; font-size: 14px; margin-top: 30px;">
+        <a href="/" style="color: #2e7d32;">← 再寫一則</a>
+    </p>
 </body>
 </html>

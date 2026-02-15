@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>歡迎頁面</title>
+</head>
+<body>
+    <h1>你好，{{ name }}！</h1>
+
+    {% if name == 'Batman' %}
+        <p style="color: red; font-size: 24px;">🦇 警報：高譚市需要你的幫助！快去開蝙蝠車！</p>
+        <h3>📦 你的裝備清單：</h3>
+
+        <form method="POST">
+            <input type="text" name="new_item" placeholder="輸入新裝備...">
+            <button type="submit">新增</button>
+        </form>
+
+        <hr>
+        <ul>
+            {% for item in gadgets %}
+                <li>
+                    {{ item[1] }} 
+                    
+                    <form action="{{ url_for('delete_gadget', gadget_id=item[0]) }}" method="POST" style="display:inline;">
+                        <button type="submit" style="color: red; border: none; background: none; cursor: pointer;">[X]</button>
+                    </form>
+                </li>
+            {% endfor %}
+        </ul>
+
+    {% else %}
+        <p style="color: blue;">這是給一般市民 {{ name }} 的普通歡迎訊息。</p>
+    {% endif %}
+
+    <style>
+        body { font-family: sans-serif; text-align: center; margin-top: 50px; }
+        h1 { color: #2c3e50; }
+
+        /* 新增這一段 */
+        ul {
+            display: inline-block; /* 關鍵：讓清單盒子縮小，只包住內容 */
+            text-align: left;      /* 讓文字靠左對齊點點，這樣比較整齊 */
+        }
+    </style>
+</body>
+</html>

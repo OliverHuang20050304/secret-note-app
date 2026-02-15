@@ -69,4 +69,6 @@ pip install -r requirements.txt
 python app.py
 ```
 現在打開瀏覽器前往 http://127.0.0.1:5001 即可使用！
+<img width="1470" height="742" alt="截圖 2026-02-15 晚上7 27 06" src="https://github.com/user-attachments/assets/49c96e62-cfe7-4b85-9169-61a1327c59d7" />
+<img width="645" height="1398" alt="23FACC80-49BF-467A-905D-6B5583EAC1CB" src="https://github.com/user-attachments/assets/8fe4d9f0-182b-4d2b-a48e-9a1ef75c402c" />
 

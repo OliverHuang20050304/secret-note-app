@@ -19,4 +19,4 @@ pip install -r requirements.txt
 ```bash
 python app.py
 ```
-啟動伺服器後打開http://127.0.0.1:5001即可使用。
+啟動伺服器後打開http://127.0.0.1:5001 即可使用。
